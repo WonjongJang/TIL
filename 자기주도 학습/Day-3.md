@@ -1,12 +1,14 @@
 [TOC]
 
-# 실습
+# Create Next App + React + Typescript + next.js로 프론트엔드 프로젝트 토대 쌓기
+
+## 실습
 
 
 
-# 정리
+## 정리
 
-## SPA(Single Page Application)
+### SPA(Single Page Application)
 
 단일 페이지 애플리케이션
 
@@ -25,7 +27,7 @@
 
 
 
-### CSR(Client Side Rendering)
+#### CSR(Client Side Rendering)
 
 클라이언트에서 화면 구성
 

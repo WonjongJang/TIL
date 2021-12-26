@@ -1,12 +1,26 @@
 [TOC]
 
-# 실습
+# DB 설계 및 ERD 작성
+
+## 실습
 
 
 
-# 정리
+## 정리
 
-## DB
+### ERD
+
+https://www.erdcloud.com/
+
+https://www.youtube.com/watch?v=E6LbuLoU6rc
+
+https://www.youtube.com/watch?v=qm8cqItjIPo
+
+
+
+### DB
+
+https://dataonair.or.kr/
 
 체계화된 데이터의 모임
 
@@ -22,7 +36,7 @@
   - 데이터 표준화
   - 데이터 보안 유지
 
-### RDB (Relational DataBase)
+#### RDB (Relational DataBase)
 
 키와 값들의 간단한 관계를 표 형태로 정리한 데이터베이스
 
@@ -33,7 +47,7 @@
   - 행(row / record) : 실제 데이터 저장
   - 기본키(Primary Key) : 각 행의 고유 값. 반드시 설정
 
-### RDBMS (Relational DataBase Management System)
+#### RDBMS (Relational DataBase Management System)
 
 관계형 모델을 기반으로 하는 데이터베이스 관리 시스템
 
@@ -63,7 +77,7 @@
 >
 > ​	∴ 비용 고려하여 데이터 일관성을 포기. 여러 대의 데이터에 분산 저장 (Scale-Out)
 
-#### SQL (Structured Query Language)
+##### SQL (Structured Query Language)
 
 RDBMS의 데이터 관리를 위해 설계된 특수 목적의 프로그래밍 언어
 
@@ -77,7 +91,7 @@ RDBMS의 데이터 관리를 위해 설계된 특수 목적의 프로그래밍 �
 
 
 
-## Django
+### Django
 
 - 사용해야 하는 이유
   - 검증된 Python 언어 기반 Web framework
