@@ -14,7 +14,7 @@
   docker -v
   ```
 
-  ![image-20211224152839080](Day-5.assets/image-20211224152839080.png)
+  ![image-20211224152839080](README.assets/image-20211224152839080.png)
 
 - 테스트용 Hello world 도커 컨테이너 실행
 
@@ -24,7 +24,7 @@
   docker run --name=[컨테이너 이름]		# 자동 이름 대신 지정된 이름으로 생성
   ```
 
-  ![image-20211224152956259](Day-5.assets/image-20211224152956259.png)
+  ![image-20211224152956259](README.assets/image-20211224152956259.png)
 
 
 
@@ -36,7 +36,7 @@
   docker ps -a
   ```
 
-  ![image-20211224153241883](Day-5.assets/image-20211224153241883.png)
+  ![image-20211224153241883](README.assets/image-20211224153241883.png)
 
 - Hello world 컨테이너 삭제
 
@@ -44,7 +44,7 @@
   docker rm [컨테이너 ID / NAME]		# ID는 앞부분만 입력 가능 ex) docker rm 8c
   ```
 
-  ![image-20211224154245513](Day-5.assets/image-20211224154245513.png)
+  ![image-20211224154245513](README.assets/image-20211224154245513.png)
 
 - 도커 이미지 조회
 
@@ -52,7 +52,7 @@
   docker images
   ```
 
-  ![image-20211224153414451](Day-5.assets/image-20211224153414451.png)
+  ![image-20211224153414451](README.assets/image-20211224153414451.png)
 
 - Hello world 도커 이미지 삭제
 
@@ -77,9 +77,9 @@ https://hub.docker.com/r/jenkins/jenkins
   - -d : 백그라운드 데몬으로 실행 시키는 옵션
   - -p : 가상 머신(Guest PC)에서 동작하는 서비스에 docker proxy 서비스가 NAT 기능을 수행해 포트포워딩을 해주어 실제 머신(HOST PC) IP로 서비스에 접속이 가능하도록 해줌
 
-![image-20211224155019831](Day-5.assets/image-20211224155019831.png)
+![image-20211224155019831](README.assets/image-20211224155019831.png)
 
-![image-20211224155129884](Day-5.assets/image-20211224155129884.png)
+![image-20211224155129884](README.assets/image-20211224155129884.png)
 
 - Jenkins 서버 컨테이너의 bash 실행 후 컨테이너의 OS 버전 확인
 
@@ -93,7 +93,7 @@ https://hub.docker.com/r/jenkins/jenkins
     - -i (interactive) : 표준입출력을 키보드와 화면을 통해 가능하도록 하는 옵션
     - -t : 텍스트 기반의 터미널(TTY)을 에뮬레이션 해주는 옵션 
 
-![image-20211224155430168](Day-5.assets/image-20211224155430168.png)
+![image-20211224155430168](README.assets/image-20211224155430168.png)
 
 - 컨테이너 안(bash)에서 Admin 패스워드가 저장된 파일 확인 후 컨터이너 bash 종료
 
@@ -101,7 +101,7 @@ https://hub.docker.com/r/jenkins/jenkins
   cat /var/jenkins_home/secrets/initialAdminPassword
   ```
 
-![image-20211224155936249](Day-5.assets/image-20211224155936249.png)
+![image-20211224155936249](README.assets/image-20211224155936249.png)
 
 - 위 두개를 한번에 실행하기
 
@@ -109,7 +109,7 @@ https://hub.docker.com/r/jenkins/jenkins
   docker exec myjenkins cat /var/jenkins_home/secrets/initialAdminPassword
   ```
 
-  ![image-20211224160142016](Day-5.assets/image-20211224160142016.png)
+  ![image-20211224160142016](README.assets/image-20211224160142016.png)
 
 - 컨테이너 안에 있는 패스워드 파일을 개발 PC로 복사하기
 
@@ -120,12 +120,12 @@ https://hub.docker.com/r/jenkins/jenkins
   initialAdminPassword
   ```
 
-![image-20211224162522213](Day-5.assets/image-20211224162522213.png)
+![image-20211224162522213](README.assets/image-20211224162522213.png)
 
 - 웹 브라우져에서 접속(http://localhost:9080)해서 앞서 확인 한 패스워드를 붙여 넣고 Jenkins 설정을 계속 진행하기
 - Install suggested plugins 선택 → 계정 설정까지 완료해서 환영 페이지 확인
 
-![image-20211224163919246](Day-5.assets/image-20211224163919246.png)
+![image-20211224163919246](README.assets/image-20211224163919246.png)
 
 - 컨테이너를 재시작해서 Up Status 시간이 초기화 된 것을 확인 후 삭제
 
@@ -136,13 +136,13 @@ https://hub.docker.com/r/jenkins/jenkins
   docker rm -f myjenkins
   ```
 
-![image-20211224164108896](Day-5.assets/image-20211224164108896.png)
+![image-20211224164108896](README.assets/image-20211224164108896.png)
 
-![image-20211224164138393](Day-5.assets/image-20211224164138393.png)
+![image-20211224164138393](README.assets/image-20211224164138393.png)
 
-![image-20211224164207728](Day-5.assets/image-20211224164207728.png)
+![image-20211224164207728](README.assets/image-20211224164207728.png)
 
-![image-20211224164228717](Day-5.assets/image-20211224164228717.png)
+![image-20211224164228717](README.assets/image-20211224164228717.png)
 
 
 
@@ -157,7 +157,7 @@ https://hub.docker.com/r/jenkins/jenkins
   npm run serve
   ```
 
-![image-20211224165828739](Day-5.assets/image-20211224165828739.png)
+![image-20211224165828739](README.assets/image-20211224165828739.png)
 
 - <project_home>/frontend/Dockerfile을 작성 후 프론트엔드용 도커 이미지 빌드
 
@@ -170,7 +170,7 @@ https://hub.docker.com/r/jenkins/jenkins
   ```
   
 
-![image-20211224174138710](Day-5.assets/image-20211224174138710.png)
+![image-20211224174138710](README.assets/image-20211224174138710.png)
 
 - 이미지에 TAG 추가하기
 
@@ -178,7 +178,7 @@ https://hub.docker.com/r/jenkins/jenkins
   docker tag front:0.1 front:latest
   ```
 
-![image-20211224190951691](Day-5.assets/image-20211224190951691.png)
+![image-20211224190951691](README.assets/image-20211224190951691.png)
 
 - 이미지에 TAG 삭제하기
 
@@ -186,7 +186,7 @@ https://hub.docker.com/r/jenkins/jenkins
   docker rmi front
   ```
 
-![image-20211224190926741](Day-5.assets/image-20211224190926741.png)
+![image-20211224190926741](README.assets/image-20211224190926741.png)
 
 - 도커로 프론트엔드 실행 및 웹 브라우저로 접속(http://localhost)해서 확인
 
@@ -194,7 +194,7 @@ https://hub.docker.com/r/jenkins/jenkins
   docker run -it -p 80:80 --rm front:0.1
   ```
 
-![image-20211224191737216](Day-5.assets/image-20211224191737216.png)
+![image-20211224191737216](README.assets/image-20211224191737216.png)
 
 > winpty 문제가 생기면 위의 코드 앞에 winpty 작성해주면 됨
 

@@ -4,6 +4,10 @@
 
 ## 실습
 
+![image-20211222142124439](README.assets/image-20211222142124439.png)
+
+![image-20211222142457560](README.assets/image-20211222142457560.png)
+
 
 
 ## 정리
