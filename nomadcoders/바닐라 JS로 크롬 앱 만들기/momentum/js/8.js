@@ -14,7 +14,7 @@
 
 
 // 8.1 [Weather API]
-const API_KEY = "6594ca47e3c6b4341ba3532e18f7a0cf"
+const API_KEY = ""
 
 function onGeoOk(position) {
   const lat = position.coords.latitude
