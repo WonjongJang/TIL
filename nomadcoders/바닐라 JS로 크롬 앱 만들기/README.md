@@ -40,3 +40,11 @@
   - **const** : 수정 X
   - let : 수정 O
   - var : 수정 O (과거에 사용)
+
+
+
+
+
+## Error
+
+- Uncaught TypeError: Cannot set property 'innerText' of null → innerText를 바꿀 태그가 없음
