@@ -142,7 +142,7 @@
 </html>
 -->
 
-<!-- 3.6 [State Practice part One] -->
+<!-- 3.6 ~ 3.7 [State Practice part One] -->
 <!DOCTYPE html>
 <html>
   <body>
@@ -153,34 +153,45 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     function App() {
-      const [minutes, setMinutes] = React.useState(0);
+      const [amount, setAmount] = React.useState(0);        // minutes, hours 모두 onChange 하기 위해 변수명 수정
+      const [flipped, setFlipped] = React.useState(false)   // 단위 변환
       const onChange = (event) => {
-        setMinutes(event.target.value);
+        setAmount(event.target.value);
       };
-      const reset = () => setMinutes(0);
+      const reset = () => setAmount(0);
+      // const onFlip = () => setFlipped(!flipped)   // 부정명제
+      const onFlip = () => {
+        reset()
+        setFlipped((current) => !current)   // 부정명제
+      }
       return (
         <div>
           <h1>Super Converter</h1>
           <div>
             <label htmlFor="minutes">Minutes</label>
             <input
-              value={minutes}
+              value={flipped ? amount*60 : amount}
               id="minutes"
               placeholder="Minutes"
               type="number"
               onChange={onChange}
+              disabled={flipped}
             />
           </div>
           <div>
             <label htmlFor="hours">Hours</label>
             <input
-              value={Math.round(minutes / 60)}
+              // value={Math.round(minutes / 60)}
+              value={flipped ? amount : Math.round(amount / 60)}
               id="hours"
               placeholder="Hours"
               type="number"
+              disabled={!flipped}
+              onChange={onChange}
             />
           </div>
           <button onClick={reset}>Reset</button>
+          <button onClick={onFlip}>Flip</button>
         </div>
       );
     }
