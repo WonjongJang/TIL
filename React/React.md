@@ -18,11 +18,57 @@
 
 
 
+# TypeScript
+
+JS기반의 언어. 프로그램 돌리기 전에 오류 알려줌
+
 
 
 
 
 # 참고
+
+## 설치
+
+### Project
+
+- React
+
+```bash
+npx create-react-app [name]
+```
+
+- TypeScript 추가
+
+```bash
+npx create-react-app [name] --template typescript
+```
+
+- React → TypeScript
+
+```bash
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+```
+
+
+
+### style
+
+```bash
+npm i styled-components
+```
+
+```js
+import styled, { keyframes } from "styled-components";
+```
+
+- TypeScript 추가
+
+```bash
+npm i @types/styled-components
+```
+
+
 
 ## Publishing
 

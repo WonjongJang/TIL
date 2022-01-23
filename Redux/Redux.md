@@ -42,6 +42,8 @@ npm install redux
 npm i react-redux
 ```
 
+- routes
+
 ```bash
 npm i react-router-dom
 ```
