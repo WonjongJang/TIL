@@ -26,11 +26,9 @@ JS기반의 언어. 프로그램 돌리기 전에 오류 알려줌
 
 
 
-# 참고
+# 설치
 
-## 설치
-
-### Project
+## Project
 
 - React
 
@@ -44,7 +42,7 @@ npx create-react-app [name]
 npx create-react-app [name] --template typescript
 ```
 
-- React → TypeScript
+- React → TypeScript 변환
 
 ```bash
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest
@@ -52,7 +50,33 @@ npm install --save typescript @types/node @types/react @types/react-dom @types/j
 
 
 
-### style
+## Router
+
+- React
+
+```bash
+npm i react-router-dom
+```
+
+- TypeScript 추가
+
+```bash
+npm i --save-dev @types/react-router-dom
+```
+
+
+
+## Query
+
+```bash
+npm i react-query
+```
+
+
+
+## style
+
+- React
 
 ```bash
 npm i styled-components
@@ -70,6 +94,21 @@ npm i @types/styled-components
 
 
 
+- React
+
+```bash
+npm i styled-reset
+
+# 설치 대신 코드 복사
+
+```
+
+
+
+
+
+# 참고
+
 ## Publishing
 
 - 결과물 업로드 패키지
@@ -84,3 +123,10 @@ npm i gh-pages
 npm run build
 ```
 
+
+
+## Extensions
+
+- Prettier
+
+- vscode-styled-components : styled 내부 css 작성 시 자동완성
