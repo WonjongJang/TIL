@@ -35,17 +35,11 @@
 ### 설치
 
 ```bash
-npm install redux
+npm i redux
 ```
 
 ```bash
 npm i react-redux
-```
-
-- routes
-
-```bash
-npm i react-router-dom
 ```
 
 

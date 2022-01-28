@@ -30,8 +30,6 @@ JS기반의 언어. 프로그램 돌리기 전에 오류 알려줌
 
 ## Project
 
-- React
-
 ```bash
 npx create-react-app [name]
 ```
@@ -52,8 +50,6 @@ npm install --save typescript @types/node @types/react @types/react-dom @types/j
 
 ## Router
 
-- React
-
 ```bash
 npm i react-router-dom
 ```
@@ -66,17 +62,57 @@ npm i --save-dev @types/react-router-dom
 
 
 
+## State
+
+- Redux
+
+https://react-redux.js.org/
+
+
+
+- Recoil
+
+https://recoiljs.org/
+
+```bash
+npm i recoil
+```
+
+
+
+## React Hook Form
+
+https://react-hook-form.com/
+
+```bash
+npm i react-hook-form
+```
+
+
+
+
+
 ## Query
+
+: API 첫 접근에서 cache에 저장하여 다시 접근 X
 
 ```bash
 npm i react-query
+```
+
+- 캐시 확인
+
+```tsx
+import { ReactQueryDevtools } from "react-query/devtools";
+
+<ReactQueryDevtools initialIsOpen={true} />
 ```
 
 
 
 ## style
 
-- React
+https://styled-components.com/
 
 ```bash
 npm i styled-components
@@ -94,13 +130,53 @@ npm i @types/styled-components
 
 
 
-- React
+- reset (초기 세팅)
 
 ```bash
 npm i styled-reset
 
 # 설치 대신 코드 복사
 
+```
+
+
+
+## chart
+
+> https://apexcharts.com/
+
+```bash
+npm install --save react-apexcharts apexcharts
+```
+
+
+
+## motion
+
+https://www.framer.com/motion
+
+```bash
+npm i framer-motion
+```
+
+
+
+
+
+
+
+## helmet
+
+: html title 변경
+
+```bash
+npm i react-helmet
+```
+
+- TypeScript 추가
+
+```bash
+npm i --save-dev @types/react-helmet
 ```
 
 
