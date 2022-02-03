@@ -181,6 +181,20 @@ npm i --save-dev @types/react-helmet
 
 
 
+## react beautiful dnd
+
+```bash
+npm i react-beautiful-dnd
+```
+
+- 
+
+```bash
+npm i --save-dev @types/react-beautiful-dnd
+```
+
+
+
 
 
 # 참고

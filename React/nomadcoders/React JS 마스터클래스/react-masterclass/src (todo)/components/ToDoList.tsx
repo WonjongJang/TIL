@@ -1,43 +1,83 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-
-interface IForm {
-  toDo: string;
-}
+import {
+  atom,
+  useRecoilState,
+  useRecoilValue,
+  useSetRecoilState,
+} from "recoil";
+import { Categories, categoryState, toDoSelector, toDoState } from "../atoms";
+import CreateToDo from "./CreateToDo";
+import ToDo from "./ToDo";
 
 function ToDoList() {
-  const { register, handleSubmit, setValue } = useForm<IForm>();
+  // const value = useRecoilValue(toDoState); // atom 값에 접근. value = []
+  // const modFn = useSetRecoilState(toDoState); // atom 값 변경
+  // const [toDos, setToDos] = useRecoilState(toDoState); // 위 두개를 하나로
+  // const toDos = useRecoilValue(toDoState); // 위 두개를 하나로
 
-  const handleValid = (data: IForm) => {
-    console.log("add to do", data.toDo);
-    setValue("toDo", "");
+  // const { register, handleSubmit, setValue } = useForm<IForm>();
+
+  // console.log(toDos);
+  // const [toDo, doing, done] = useRecoilValue(toDoSelector); // 3개의 배열 받음
+  const toDos = useRecoilValue(toDoSelector); //
+  // console.log(selectorOutput);
+  const [category, setCategory] = useRecoilState(categoryState);
+  const onInput = (event: React.FormEvent<HTMLSelectElement>) => {
+    setCategory(event.currentTarget.value as any);
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit(handleValid)}>
-        <input
-          {...register("toDo", { required: "Please write a To Do" })}
-          placeholder="Write a to do"
-        />
-        <button>Add</button>
-      </form>
+      <h1>To Dos</h1>
+      <hr />
+      <select value={category} onInput={onInput}>
+        <option value={Categories.TO_DO}>To Do</option>
+        <option value={Categories.DOING}>Doing</option>
+        <option value={Categories.DONE}>Done</option>
+      </select>
+      <CreateToDo />
+      {toDos?.map((toDo) => (
+        <ToDo key={toDo.id} {...toDo} />
+      ))}
+
+      {/* <h2>To Do</h2>
+      <ul>
+        {toDo.map((toDo) => (
+          <ToDo key={toDo.id} {...toDo} /> // text={toDo.text} category={toDo.category} id={toDo.id}를 한방에! (하나의 인터페이스로 같은 타입을 공유하기 때문에 이렇게해도 가능)
+        ))}
+      </ul>
+      <hr />
+      <h2>Doing</h2>
+      <ul>
+        {doing.map((toDo) => (
+          <ToDo key={toDo.id} {...toDo} /> // text={toDo.text} category={toDo.category} id={toDo.id}를 한방에! (하나의 인터페이스로 같은 타입을 공유하기 때문에 이렇게해도 가능)
+        ))}
+      </ul>
+      <hr />
+      <h2>Done</h2>
+      <ul>
+        {done.map((toDo) => (
+          <ToDo key={toDo.id} {...toDo} /> // text={toDo.text} category={toDo.category} id={toDo.id}를 한방에! (하나의 인터페이스로 같은 타입을 공유하기 때문에 이렇게해도 가능)
+        ))}
+      </ul>
+      <hr /> */}
     </div>
   );
 }
 
 export default ToDoList;
 
-interface IForm {
-  // 필수가 아니면 ?
-  email: string;
-  firstName: string;
-  lastName: string;
-  username: string;
-  password: string;
-  password1: string;
-  extraError?: string;
-}
+// interface IForm {
+//   // 필수가 아니면 ?
+//   email: string;
+//   firstName: string;
+//   lastName: string;
+//   username: string;
+//   password: string;
+//   password1: string;
+//   extraError?: string;
+// }
 
 // function ToDoList() {
 // const {
