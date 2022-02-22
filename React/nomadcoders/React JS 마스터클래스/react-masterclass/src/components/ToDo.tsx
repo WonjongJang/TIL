@@ -11,6 +11,7 @@ function ToDo({ text, category, id }: IToDo) {
     const {
       currentTarget: { name },
     } = event;
+    console.log(name);
     setToDos((oldToDos) => {
       const targetIndex = oldToDos.findIndex((toDo) => toDo.id === id); // 기존 state에 있는 배열에서 클릭한 값 찾기
       console.log(targetIndex);

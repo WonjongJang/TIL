@@ -64,18 +64,24 @@ npm i --save-dev @types/react-router-dom
 
 ## State
 
-- Redux
+### Redux
 
 https://react-redux.js.org/
 
 
 
-- Recoil
+### Recoil
 
 https://recoiljs.org/
 
 ```bash
 npm i recoil
+```
+
+- 상태관리 유지
+
+```bash
+npm i recoil-persist
 ```
 
 
