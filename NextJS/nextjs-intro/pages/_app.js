@@ -1,3 +1,6 @@
+// 여기는 import 할 게 많기 때문에 Layout으로 처리해줌
+
+import Layout from "../components/Layout";
 import NavBar from "../components/NavBar";
 import "../styles/globals.css";
 
@@ -5,8 +8,10 @@ import "../styles/globals.css";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <NavBar />
-      <Component {...pageProps} />
+      {/* <NavBar /> */}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
       {/* <span>hello</span> */}
       {/* <style jsx global>{`
         a {
