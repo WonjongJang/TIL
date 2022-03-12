@@ -88,6 +88,20 @@ https://www.npmjs.com/package/next-auth
 
 https://developers.cloudflare.com/images/cloudflare-images/upload-images/direct-creator-upload/
 
+토큰 생성 : https://dash.cloudflare.com/profile/api-tokens
+
+- Images
+
+- Stream
+
+  - 방송 도구
+
+    - OBS
+
+    - Live Now
+
+  - 
+
 
 
 # 설치
