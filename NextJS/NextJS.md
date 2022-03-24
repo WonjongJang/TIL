@@ -91,7 +91,6 @@ https://developers.cloudflare.com/images/cloudflare-images/upload-images/direct-
 토큰 생성 : https://dash.cloudflare.com/profile/api-tokens
 
 - Images
-
 - Stream
 
   - 방송 도구
@@ -100,7 +99,27 @@ https://developers.cloudflare.com/images/cloudflare-images/upload-images/direct-
 
     - Live Now
 
-  - 
+
+
+# Middlewares
+
+1. pages에 바로 넣어서 글로벌 미들웨어 생성
+
+2. 해당 페이지에만 실행될 미들웨어 생성
+
+
+
+Page, Api 둘다 동작
+
+훅으로 막는거 보다 편리 (훅은 복붙 많이 해야함, DB에 요청 보내야함)
+
+미들웨어는 DB 접근없이 쿠키 유무만 확인
+
+
+
+# ISR
+
+
 
 
 
@@ -197,6 +216,14 @@ pscale connect carrot-market
 npm run dev
 ```
 
+- 빌드
+
+```bash
+npm run build
+```
+
+
+
 
 
 ## React-hook-form
@@ -243,6 +270,24 @@ npm i swr --legacy-peer-deps
 
 
 
+## gray-matter
+
+```bash
+npm install --save gray-matter
+```
+
+
+
+## Dynamic getStaticProps
+
+페이지 빌드 전 데이터 추가
+
+```bash
+npm i unified remark-parse remark-html
+```
+
+
+
 
 
 ## Extension
@@ -258,3 +303,36 @@ https://www.typescriptlang.org/ko/docs/handbook/2/generics.html : 타입스크�
 
 Session vs Token vs Cookie
 https://youtu.be/tosLBcAX1vk
+
+
+
+- NextJS 기본기능
+
+  - 페이지의 처음 상태를 HTML로 렌더링 (페이지를 불러오자마자 볼 수 있도록)
+  - 리액트를 클라이언트가 불러옴 (리액트가 프론트단을 불러온다?)
+  - useSWR 불러옴
+  - useSWR이 API 요청하면 DB에서 데이터 불러옴
+  - 리액트가 컴포넌트를 화면에 그려줌
+
+- getServerSideProps
+
+  > 서버단에서 데이터를 불러옴
+  >
+  > 로딩 상태 없이 페이지 보여줄 수 있음
+  >
+  > HTML 자체에 데이터가 들어있어서 가능
+  >
+  > 리액트가 데이터를 불러올 필요 X (프론트단에서 리액트가 한 일은 1도 없음)
+
+  - 장점 : 유저가 로딩 상태를 볼 일이 없음 (데이터 나타날 때까지 조금 기다리면 됨)
+  - 단점 : nav와 같은 기본적으로 바로 볼 수 있는 UI 컴포넌트도 데이터 불러올 때까지 못봄
+
+- getStaticProps
+
+  > 웹사이트 빌드할 때 한번만 생성
+  >
+  > 어떠한 데이터도 이용해서 여러 개의 HTML 페이지를 생성할 수 있게 함 ex) md 파일
+  >
+  > 리액트랑 상관 X, 그냥 HTML일 뿐 JS조차 필요없다
+
+ㅇㅇ
