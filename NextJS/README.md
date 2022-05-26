@@ -96,8 +96,33 @@ https://developers.cloudflare.com/images/cloudflare-images/upload-images/direct-
   - 방송 도구
 
     - OBS
-
     - Live Now
+
+
+
+DCU
+
+유저가 나 파일 업로드 할거임
+
+그 파일은 서버에 저장 안함 (파일 건드리지도 않음 -> 돈)
+
+유저가 업로드 하면 잠깐 기다려달라한 후
+
+클플에게 유저가 파일 업로드 한다고 알림 -> 요청 (백엔드 API KEY 보유)
+
+클플은 빈 파일 url 만들어서 우리에게 줌
+
+우리는 그걸 유저에게 줌
+
+유저는 그걸 이용해서 클플에 직접 파일을 업로드 한다
+
+
+
+클플이 자기들의 백엔드에 공간 마련해놓고 거기에 연결되는 url을 주는 것
+
+유저가 업로드한 파일이 그 공간을 채움 
+
+브라우저가 직접 클플에 접근 (API key 전혀 노출안됨)
 
 
 
@@ -288,9 +313,7 @@ npm i unified remark-parse remark-html
 
 
 
-
-
-## Extension
+# Extension
 
 - Tailwind CSS IntelliSense : 자동 완성 `ctrl+space`
 - Prisma
@@ -305,6 +328,8 @@ Session vs Token vs Cookie
 https://youtu.be/tosLBcAX1vk
 
 
+
+# 참고
 
 - NextJS 기본기능
 
@@ -334,5 +359,3 @@ https://youtu.be/tosLBcAX1vk
   > 어떠한 데이터도 이용해서 여러 개의 HTML 페이지를 생성할 수 있게 함 ex) md 파일
   >
   > 리액트랑 상관 X, 그냥 HTML일 뿐 JS조차 필요없다
-
-ㅇㅇ
